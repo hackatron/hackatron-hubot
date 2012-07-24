@@ -45,4 +45,3 @@ module.exports = (robot)->
         response_handler text
 
         break if count == top
-
