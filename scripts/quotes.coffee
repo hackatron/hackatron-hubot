@@ -77,7 +77,7 @@ module.exports = (robot) ->
           msg.send "I know."
         else
           user.quotes = (quote for quote in user.quotes when quote isnt newQuote)
-          msg.send "Ok, #{name} said no longer #{newQuote}."
+          msg.send "Ok, #{name} no longer said #{newQuote}."
       else if users.length > 1
         msg.send getAmbiguousUserText users
       else
