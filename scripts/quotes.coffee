@@ -47,7 +47,7 @@ module.exports = (robot) ->
       unless newQuote.match(/^not\s+/i)
         users = robot.usersForFuzzyName(name)
         if users.length is 1
-          user = users[0quotes]
+          user = users[0]
           user.quotes = user.quotes or [ ]
 
           if newQuote in user.quotes
