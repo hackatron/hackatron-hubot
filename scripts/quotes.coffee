@@ -63,7 +63,7 @@ module.exports = (robot) ->
         else
           msg.send "#{name} didn't say anthing."
 
-  robot.respond /@?([\w .\-_]+) is not (["'\w: \-_]+)[.!]*$/i, (msg) ->
+  robot.respond /@?([\w .\-_]+) didn't say (["'\w: \-_]+)[.!]*$/i, (msg) ->
     name    = msg.match[1].trim()
     newQuote = msg.match[2].trim()
 
