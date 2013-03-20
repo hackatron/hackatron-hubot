@@ -9,7 +9,7 @@ module.exports = (robot) ->
     robot.brain.data.apina ?= { reasons: [] }
     robot.brain.data.apina.reasons
 
-  robot.respond /(.+) is (not )?a reason for apina/, (msg) ->
+  robot.respond /(.+) is (not )?a reason for apina/i, (msg) ->
     reasons = reasons()
 
     if msg.match[2]
@@ -39,5 +39,5 @@ module.exports = (robot) ->
       .headers(Cookie: 'i_need_it_now=fapfap')
       .get() (err, res, body) ->
         message = "http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg"
-        message = [message, reason].join(' ') if reason?
+        message = [message, reason].join(' for ') if reason?
         msg.send(message)
