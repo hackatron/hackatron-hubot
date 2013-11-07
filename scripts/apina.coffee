@@ -10,4 +10,4 @@ module.exports = (robot) ->
     msg.http("http://apinaporn.com/random")
       .headers(Cookie: 'i_need_it_now=fapfap')
       .get() (err, res, body) ->
-        msg.send "http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg"
+        msg.send "NSFW http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg"
