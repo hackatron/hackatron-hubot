@@ -1,8 +1,18 @@
 # Description:
 #   Receive an apina
 #
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
 # Commands:
 #   hubot apina - Receive an apina
+#   hubot apina bomb N - get N apina
+#
+# Author:
+#   potomak, lucavibesmilan
 
 module.exports = (robot) ->
 
