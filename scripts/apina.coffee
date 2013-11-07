@@ -11,8 +11,8 @@
 #   hubot apina - Receive an apina
 #   hubot apina bomb N - get N apina
 #
-# Author:
-#   potomak, lucavibesmilan
+# Authors:
+#   potomak, bugant, lucavibesmilan
 
 module.exports = (robot) ->
 
@@ -20,7 +20,7 @@ module.exports = (robot) ->
     msg.http("http://apinaporn.com/random")
       .headers(Cookie: 'i_need_it_now=fapfap')
       .get() (err, res, body) ->
-        msg.send "http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg [NSFW]"
+        msg.send "NSFW http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg"
 
   robot.respond /apina bomb( (\d+))?/i, (msg) ->
     count = msg.match[2] || 5
@@ -28,4 +28,4 @@ module.exports = (robot) ->
       msg.http("http://apinaporn.com/random")
       .headers(Cookie: 'i_need_it_now=fapfap')
       .get() (err, res, body) ->
-        msg.send "http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg [NSFW]"
+        msg.send "NSFW http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg"
