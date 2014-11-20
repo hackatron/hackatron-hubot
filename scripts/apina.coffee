@@ -20,7 +20,7 @@ module.exports = (robot) ->
     msg.http("http://apinaporn.com/random")
       .headers(Cookie: 'i_need_it_now=fapfap')
       .get() (err, res, body) ->
-        msg.send "NSFW http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg"
+        msg.send "http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg"
 
   robot.respond /apina bomb( (\d+))?/i, (msg) ->
     count = msg.match[2] || 5
@@ -28,4 +28,4 @@ module.exports = (robot) ->
       msg.http("http://apinaporn.com/random")
       .headers(Cookie: 'i_need_it_now=fapfap')
       .get() (err, res, body) ->
-        msg.send "NSFW http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg"
+        msg.send "http://apinaporn.com/" + res.headers.location.match(/\d+/)[0] + ".jpg"
