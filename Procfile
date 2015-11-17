@@ -1,1 +1,1 @@
-web: bin/hubot -a irc
+worker: bin/hubot -a $ADAPTER
